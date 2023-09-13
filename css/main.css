@@ -1,0 +1,119 @@
+.content {
+  & > .card_container > .card {
+    color: #fff;
+    font-family: Oswald;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 44rem;
+    justify-content: start;
+
+    &[data-priority="sub"] {
+      height: 27rem;
+      & > .card_category {
+        margin-top: 32px;
+      }
+    }
+
+    & > .card_category {
+      background: #ff565c;
+      border: none;
+      padding: 10px 25px;
+      width: fit-content;
+      font-size: 1.4rem;
+      font-weight: 500;
+      letter-spacing: 1.75px;
+      margin-bottom: 2rem;
+      margin-top: 87px;
+    }
+
+    & > .card_desc {
+      font-size: 2.6rem;
+      font-weight: 500;
+      letter-spacing: -0.382px;
+      text-transform: uppercase;
+      width: 275px;
+    }
+
+    & > .card_icon_box {
+      display: flex;
+      position: absolute;
+
+      & > .card_icon {
+        display: flex;
+        align-items: center;
+        margin-right: 6px;
+
+        & > img {
+          fill: #fff;
+        }
+        & > span {
+          font-weight: 500;
+          line-height: 3rem;
+          font-size: 1.3rem;
+          padding: 0 1rem;
+        }
+      }
+    }
+
+    &[data-align="center"] {
+      align-items: center;
+      & > .card_desc {
+        text-align: center;
+      }
+      & > .card_icon_box {
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: 2.5rem;
+      }
+    }
+
+    &[data-align="start"] {
+      align-items: start;
+      & > .card_desc {
+        text-align: left;
+        margin-left: 2.5rem;
+      }
+      & > .card_icon_box {
+        left: 2.5rem;
+        bottom: 2.5rem;
+      }
+    }
+  }
+
+  & > .card-text {
+    display: flex;
+    flex-direction: column;
+
+    & > .title {
+      font-size: 1.4rem;
+      padding: 35px 27px;
+      text-transform: uppercase;
+      letter-spacing: 1.531px;
+      font-weight: 500;
+    }
+
+    & > .card-text-row {
+      width: 100%;
+      display: flex;
+      font-size: 1.8rem;
+      color: #1d1f24;
+      font-weight: 500;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #f2f3f6;
+      margin-bottom: 30px;
+
+      & > .rank {
+        padding: 0 27px;
+        opacity: 0.1662;
+      }
+      & > .summary {
+        width: 200px;
+        font-style: normal;
+        line-height: 2.6rem;
+        letter-spacing: -0.2px;
+      }
+    }
+  }
+}
